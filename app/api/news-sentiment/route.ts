@@ -51,13 +51,18 @@ export async function POST(request: Request) {
           {
             role: "user",
             content: `Analyze these live news headlines for "${cleanStockQuery}":\n\n${newsTextBlock}\n\n` +
-                     `Provide your assessment using exactly this layout structure (no intro, no markdown text boxes):\n\n` +
+                     `CRITICAL RULE: Output ONLY the requested format blocks. Do not add intro or concluding chit-chat. Do not wrap the code blocks or response fields in markdown backticks (\`\`\`). Follow the template tags exactly.\n\n` +
                      `🤝 MAJOR DEALS: [Analyze partnerships, acquisitions, or contracts mentioned. If none, write 'No active deal announcements found.']\n` +
                      `🌍 GLOBAL POWER & MACRO: [Analyze how global politics, interest rates, regulations, or macro trends impact this specific stock right now]\n` +
                      `🎯 FINAL RECOMMENDATION: [State either 'STRONGLY RECOMMEND BUY', 'WEAK BUY', 'HOLD', or 'SELL' in all caps based purely on these news headlines] because [Give a 1-sentence reason]`
           }
         ],
         stream: false,
+        options: {
+          temperature: 0.0, // Ensures deterministic sentiment analysis scores on matching headlines
+          top_k: 1,         // Drops sampling variation to lock structural stability
+          top_p: 1.0
+        }
       }),
     });
 
