@@ -1,76 +1,149 @@
 # 🚀 FinSight AI
 
-FinSight AI is an AI-powered financial analytics platform that combines candlestick pattern recognition, market sentiment analysis, quantitative insights, and conversational AI into a unified dashboard. The platform demonstrates the integration of modern web technologies, machine learning concepts, and local large language models (LLMs) for financial intelligence applications.
+### AI-Powered Financial Intelligence & Market Analytics Platform
+
+FinSight AI is a next-generation financial analytics platform that combines **Artificial Intelligence**, **Candlestick Pattern Recognition**, **Market Sentiment Analysis**, **Quantitative Insights**, and **Conversational AI** into a unified dashboard experience.
+
+Built with modern web technologies and local Large Language Models (LLMs), FinSight AI demonstrates practical applications of AI and Machine Learning in financial technology while maintaining complete privacy through local inference.
+
+---
+
+## 📸 Dashboard Preview
+
+> Add a screenshot inside `/public/screenshot.png`
+
+```markdown
+![FinSight AI Dashboard](public/screenshot.png)
+```
+
+---
 
 ## 🌟 Key Features
 
-* 📈 AI-powered candlestick pattern analysis
-* 📰 Financial news sentiment analysis
-* 🤖 Intelligent AI Copilot for market insights
-* 📊 Interactive stock market visualizations
-* 🔍 Quantitative analytics dashboard
-* 🔒 Privacy-focused local AI processing
-* ⚡ Modern responsive user interface
+### 📈 AI-Powered Market Analysis
+
+* Candlestick pattern recognition
+* Trend identification
+* Multi-timeframe market analysis
+* Support & resistance detection
+
+### 📰 Financial Sentiment Intelligence
+
+* News sentiment aggregation
+* Market mood analysis
+* AI-generated summaries
+* Event-driven insights
+
+### 🤖 AI Copilot
+
+* Conversational financial assistant
+* Natural language stock queries
+* Market research support
+* Intelligent investment explanations
+
+### 📊 Interactive Dashboard
+
+* Modern responsive interface
+* Real-time visualizations
+* Analytics widgets
+* Dark-mode optimized workspace
+
+### 🔒 Privacy-First AI
+
+* Local LLM execution
+* No third-party AI APIs required
+* Offline inference support
+* Complete user data control
+
+---
 
 ## 🧠 Artificial Intelligence & Machine Learning
 
-This project demonstrates practical applications of AI and Machine Learning in financial technology:
+FinSight AI demonstrates real-world AI integration through:
 
-* Large Language Model (LLM) integration using Ollama
-* AI-assisted market sentiment interpretation
-* Natural Language Processing (NLP) for financial queries
-* Pattern recognition concepts for candlestick analysis
-* Intelligent conversational financial assistant
-* Local inference architecture for enhanced privacy
+* Large Language Models (LLMs)
+* Natural Language Processing (NLP)
+* Financial Sentiment Analysis
+* Conversational AI Systems
+* Pattern Recognition Techniques
+* Local AI Inference Architecture
 
-## 🏗️ Architecture
+### AI Stack
+
+| Component           | Technology          |
+| ------------------- | ------------------- |
+| AI Runtime          | Ollama              |
+| LLM                 | Llama 3             |
+| NLP Engine          | Local Inference     |
+| AI Assistant        | FinSight Copilot    |
+| Market Intelligence | AI-Powered Analysis |
+
+---
+
+## 🏗️ System Architecture
 
 ```text
-User Interface (Next.js + TypeScript + Tailwind CSS)
-                    │
-                    ▼
-            API Routes (Next.js)
-                    │
-                    ▼
-        Ollama Local AI Runtime
-                    │
-                    ▼
-          Llama 3 Large Language Model
-                    │
-                    ▼
-          AI Analysis & Predictions
+┌───────────────────────────────────────────────┐
+│                FinSight AI                    │
+└───────────────────────────────────────────────┘
+                       │
+                       ▼
+      Next.js + React + TypeScript Frontend
+                       │
+                       ▼
+              API Routes Layer
+                       │
+                       ▼
+             Financial Analytics Engine
+                       │
+      ┌────────────────┼────────────────┐
+      ▼                ▼                ▼
+Pattern Analysis  Sentiment AI   Market Insights
+      │                │                │
+      └────────────────┼────────────────┘
+                       ▼
+              Ollama AI Runtime
+                       │
+                       ▼
+                Llama 3 Model
+                       │
+                       ▼
+              AI Predictions &
+             Conversational Output
 ```
 
-## ⚠️ Important Deployment Note
+---
 
-FinSight AI uses Ollama for local AI inference.
+## ⚠️ Deployment Information
 
-The live Vercel deployment primarily demonstrates:
+The public Vercel deployment showcases:
 
-* User Interface (UI)
-* Dashboard Architecture
-* Frontend Experience
+* Dashboard UI
+* Application Architecture
+* Analytics Workflows
+* Frontend Components
 * API Structure
-* Financial Analytics Workflow
 
-AI inference is executed locally through Ollama and requires a running local AI environment.
+AI inference requires a local Ollama environment.
 
-This design was chosen because:
+### Why Local AI?
 
-* No API costs
-* Complete data privacy
-* Local hardware acceleration
-* Offline AI capabilities
-* Full control over model deployment
+* Zero API Costs
+* Enhanced Privacy
+* Offline Capabilities
+* Faster Local Responses
+* Full Model Control
 
-## 🛠️ Tech Stack
+---
+
+## 🛠️ Technology Stack
 
 ### Frontend
 
 * Next.js 16
+* React
 * TypeScript
 * Tailwind CSS
-* React
 
 ### Artificial Intelligence
 
@@ -84,17 +157,23 @@ This design was chosen because:
 * Git
 * GitHub
 * Vercel
+* Node.js
+
+---
 
 ## 🚀 Live Demo
 
 https://finsight-ai-seven-lilac.vercel.app/
 
-## 💻 Local Setup
+---
+
+## 💻 Local Development Setup
 
 ### Clone Repository
 
 ```bash
 git clone https://github.com/vaseemsadikkali/finsight-ai.git
+
 cd finsight-ai
 ```
 
@@ -106,7 +185,7 @@ npm install
 
 ### Install Ollama
 
-Download Ollama:
+Download from:
 
 https://ollama.com
 
@@ -116,13 +195,13 @@ https://ollama.com
 ollama pull llama3
 ```
 
-### Start Ollama
+### Start Ollama Runtime
 
 ```bash
 ollama serve
 ```
 
-### Run Application
+### Run Development Server
 
 ```bash
 npm run dev
@@ -134,32 +213,106 @@ Open:
 http://localhost:3000
 ```
 
-## 📂 Core Components
+---
 
-* AI Copilot
-* Sentiment Analysis Engine
-* Candlestick Analysis Module
-* Financial Dashboard
-* Visualization Layer
-* Local LLM Integration Layer
+## 📂 Project Structure
 
-## 🎯 Future Enhancements
-
-* Real-time NSE/BSE market integration
-* Portfolio management system
-* Advanced technical indicators
-* AI confidence scoring
-* Multi-model AI support
-* Predictive analytics engine
-* User authentication and watchlists
-
-## 👨‍💻 Author
-
-Vaseem Sadikkali
-
-GitHub:
-https://github.com/vaseemsadikkali
+```text
+src/
+├── app/
+├── components/
+├── hooks/
+├── lib/
+├── services/
+├── utils/
+├── public/
+└── styles/
+```
 
 ---
 
-⭐ If you found this project interesting, consider giving it a star.
+## 📌 Core Modules
+
+### AI Copilot
+
+Conversational assistant for financial intelligence and stock market research.
+
+### Sentiment Analysis Engine
+
+Processes financial news and market narratives.
+
+### Candlestick Analysis Module
+
+Identifies chart patterns and market structure signals.
+
+### Market Dashboard
+
+Unified analytics workspace with visual indicators.
+
+### Local AI Integration Layer
+
+Connects Ollama and Llama 3 to the application.
+
+---
+
+## 🎯 Roadmap
+
+### Version 1.0
+
+* AI Copilot
+* Candlestick Analysis
+* Sentiment Intelligence
+* Interactive Dashboard
+
+### Version 2.0
+
+* NSE/BSE Live Market Data
+* Portfolio Tracking
+* Watchlists
+* Voice Assistant
+
+### Version 3.0
+
+* Multi-Model AI Support
+* Predictive Analytics
+* Strategy Backtesting
+* Institutional Analytics Suite
+
+---
+
+## 🔒 Security & Privacy
+
+FinSight AI follows modern security practices:
+
+* Local AI processing
+* Environment variable protection
+* Secure API communication
+* Client-side privacy controls
+
+No financial data is shared with external AI providers when running locally.
+
+---
+
+## 👨‍💻 Author
+
+**Vaseem Sadikkali**
+
+GitHub: https://github.com/vaseemsadikkali
+
+---
+
+## 📜 License
+
+Distributed under the MIT License.
+
+---
+
+## ⚠️ Disclaimer
+
+FinSight AI is intended for educational, research, and analytical purposes only.
+
+The platform does not provide financial advice, investment recommendations, or guarantees regarding future market performance. Users should conduct their own research before making investment decisions.
+
+---
+
+⭐ If you find FinSight AI useful, consider giving the repository a star.
